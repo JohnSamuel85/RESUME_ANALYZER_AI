@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Analyzer | Bright Theme</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Bright Particle Background -->
+    <canvas id="particle-canvas" class="background-animation"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>ResumeAI</span>
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#analyzer" class="btn-nav">Analyze Resume</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content reveal">
+                <div class="badge">Powered by Google Gemini 2.0</div>
+                <h1 class="hero-title">Elevate Your Career with <span class="gradient-text">AI Precision</span></h1>
+                <p class="hero-subtitle">Upload your resume and the target job description. Our advanced AI engine analyzes your fit, identifies skill gaps, and provides actionable, data-driven feedback to help you land your dream job.</p>
+                <div class="hero-cta">
+                    <a href="#analyzer" class="btn-primary">
+                        <span>Analyze My Resume</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#how-it-works" class="btn-secondary">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual reveal reveal-delay-1">
+                <div class="glass-card mockup-card float-anim">
+                    <div class="mockup-header">
+                        <div class="dots"><span></span><span></span><span></span></div>
+                        <div class="title">Analysis Output</div>
+                    </div>
+                    <div class="mockup-body">
+                        <div class="mockup-score">
+                            <svg viewBox="0 0 100 100" class="mini-circular">
+                                <circle class="bg" cx="50" cy="50" r="40"></circle>
+                                <circle class="progress" cx="50" cy="50" r="40" style="stroke-dashoffset: 60; stroke: #10b981;"></circle>
+                            </svg>
+                            <span>9.2/10 Match</span>
+                        </div>
+                        <div class="mockup-bars">
+                            <div class="bar-row"><div class="bar-fill" style="width: 85%"></div></div>
+                            <div class="bar-row"><div class="bar-fill" style="width: 95%"></div></div>
+                            <div class="bar-row"><div class="bar-fill" style="width: 70%"></div></div>
+                        </div>
+                        <div class="mockup-tags">
+                            <span>Python</span><span>React</span><span>TensorFlow</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card floating-badge float-anim-reverse">
+                    <i class="fa-brands fa-google"></i>
+                    <span>Gemini AI Insights</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features section-padding">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Why Choose ResumeAI?</h2>
+                <p>Equipped with cutting-edge natural language processing to give you the ultimate edge.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card glass-panel reveal reveal-delay-1">
+                    <div class="icon-wrapper"><i class="fa-solid fa-brain"></i></div>
+                    <h3>Deep Contextual Matching</h3>
+                    <p>Goes beyond keyword stuffing. We analyze the semantic context of your experience against the job requirements.</p>
+                </div>
+                
+                <div class="feature-card glass-panel reveal reveal-delay-2">
+                    <div class="icon-wrapper"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Confidence & Sentiment</h3>
+                    <p>Measures the strength of your action verbs and overall confidence portrayed in your resume text.</p>
+                </div>
+                
+                <div class="feature-card glass-panel reveal reveal-delay-3">
+                    <div class="icon-wrapper"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3>Generative AI Feedback</h3>
+                    <p>Powered by Google Gemini to construct human-like, actionable feedback targeted at improving your specific weak points.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section id="how-it-works" class="how-it-works section-padding">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Seamless Workflow</h2>
+                <p>Three simple steps to perfect your application strategy.</p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step-item reveal">
+                    <div class="step-num">01</div>
+                    <div class="step-content glass-panel">
+                        <h3>Upload Resume</h3>
+                        <p>Securely upload your CV in PDF, DOCX, or Image format. Our OCR engines extract your text flawlessly.</p>
+                    </div>
+                </div>
+                
+                <div class="step-item reveal reveal-delay-1">
+                    <div class="step-num">02</div>
+                    <div class="step-content glass-panel">
+                        <h3>Paste Job Details</h3>
+                        <p>Provide the target job description so our models know exactly what the recruiters are looking for.</p>
+                    </div>
+                </div>
+                
+                <div class="step-item reveal reveal-delay-2">
+                    <div class="step-num">03</div>
+                    <div class="step-content glass-panel border-glow">
+                        <h3>Review Analysis</h3>
+                        <p>Get instant matching scores, skill gap analysis, and tailored AI suggestions to revamp your resume.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analyzer Tool Section -->
+    <section id="analyzer" class="analyzer-tool section-padding">
+        <div class="container">
+            <div class="analyzer-wrapper glass-panel reveal">
+                <header class="tool-header">
+                    <h2>Resume Analysis Engine</h2>
+                    <p>Initialize the scan.</p>
+                </header>
+
+                <div class="input-panel">
+                    <form id="analyzer-form">
+                        <div class="form-layout">
+                            <div class="form-left">
+                                <div class="form-group">
+                                    <label for="resume-upload" class="upload-label">
+                                        <div class="upload-icon-ring">
+                                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                                        </div>
+                                        <span id="file-name">Drag & Drop Resume (PDF, DOCX, JPG)<br><small>or Click to Browse</small></span>
+                                        <input type="file" id="resume-upload" name="resume" accept=".pdf,.docx,.jpg,.jpeg,.png" required>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-right">
+                                <div class="form-group">
+                                    <label for="job-description">Target Job Description</label>
+                                    <textarea id="job-description" name="job_description" placeholder="Paste the job requirements, responsibilities, and qualifications here..." required></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primary full-width mt-4" id="analyze-btn">
+                            <span>Execute AI Analysis</span>
+                            <i class="fa-solid fa-bolt"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Loading State -->
+                <div id="loadingIndicator" class="loading-panel hidden">
+                    <div class="loader-ring">
+                    </div>
+                    <h3 class="text-primary">Analyzing Datasets</h3>
+                    <div class="processing-steps">
+                        <span class="step active">Extracting resume telemetry...</span>
+                        <span class="step">Compiling TF-IDF matrices...</span>
+                        <span class="step">Connecting to Gemini Neural Net...</span>
+                        <span class="step">Synthesizing final directives...</span>
+                    </div>
+                </div>
+
+                <!-- Results Dashboard -->
+                <div id="resultsDashboard" class="results-panel hidden">
+                    <div class="dashboard-header">
+                        <h3>Analysis Complete</h3>
+                        <button class="btn-secondary small" onclick="location.reload()"><i class="fa-solid fa-rotate-right"></i> New Scan</button>
+                    </div>
+                    
+                    <div class="score-cards">
+                        <div class="card glass-panel stat-card main-score-card">
+                            <div class="circular-progress">
+                                <svg viewBox="0 0 100 100">
+                                    <circle class="bg" cx="50" cy="50" r="45"></circle>
+                                    <circle class="progress" id="overall-score-circle" cx="50" cy="50" r="45"></circle>
+                                </svg>
+                                <div class="score-value" id="overall-score">0</div>
+                            </div>
+                            <h3>AI Match Score</h3>
+                            <p class="score-subtitle">Out of 10</p>
+                        </div>
+
+                        <div class="card glass-panel stat-card sub-scores">
+                            <div class="score-block">
+                                <div class="score-row">
+                                    <span>Relevance Match</span>
+                                    <strong id="relevance-score">0/10</strong>
+                                </div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" id="relevance-bar" style="width: 0%;"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="score-block mt-4">
+                                <div class="score-row">
+                                    <span>Confidence & Sentiment</span>
+                                    <strong id="sentiment-score">0/10</strong>
+                                </div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar bg-purple" id="sentiment-bar" style="width: 0%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="details-section">
+                        <div class="card glass-panel skills-card">
+                            <h3><i class="fa-solid fa-microchip text-accent"></i> Extracted Core Skills</h3>
+                            <div class="skills-container" id="matched-skills">
+                                <!-- Skills generated here -->
+                            </div>
+                            <p id="no-skills-msg" class="hidden text-muted">No specific target skills found matching our database.</p>
+                        </div>
+
+                        <div class="card glass-panel feedback-card">
+                            <h3><i class="fa-brands fa-google text-accent"></i> Gemini Strategic Directives</h3>
+                            <div class="feedback-content" id="gemini-feedback">
+                               <!-- Markdown feedback goes here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo logo">
+                <i class="fa-solid fa-layer-group"></i> ResumeAI
+            </div>
+            <p>&copy; 2026 AI Resume Analyzer. Built for professionals.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+flask
+spacy
+pdfminer.six
+python-docx
+docx2txt
+pytesseract
+pillow
+textblob
+scikit-learn
+google-generativeai
+python-dotenv
+werkzeug
