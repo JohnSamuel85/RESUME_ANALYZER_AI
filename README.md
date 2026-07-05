@@ -4,8 +4,9 @@
 
 Resume Analyzer AI is a sophisticated web application built with **Flask** and powered by **Google Gemini AI**. It provides deep analysis of resumes by comparing them against job descriptions, offering detailed feedback, skill matching, and an overall relevance score.
 
-Live Demo Link : https://resume-analyzer-ai-8l0s.onrender.com
+Live Deployed Link : https://resume-analyzer-ai-8l0s.onrender.com
 
+Demo video link :- https://youtu.be/aKOpJUyT8n0
 ---
 
 ## 🚀 Key Features
